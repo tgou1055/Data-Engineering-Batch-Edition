@@ -62,7 +62,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20220420"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20240501"]
   }
 
   filter {
@@ -113,7 +113,7 @@ echo 'Clone git repo to EC2'
 cd /home/ubuntu && git clone ${var.repo_url}
 
 echo 'CD to data_engineering_project_template directory'
-cd data_engineering_project_template
+cd Data-Engineering-Batch-Edition
 
 echo 'Start containers & Run db migrations'
 make up
