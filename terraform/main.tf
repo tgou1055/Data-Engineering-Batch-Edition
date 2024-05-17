@@ -116,19 +116,10 @@ echo 'CD to data_engineering_project_template directory'
 cd Data-Engineering-Batch-Edition
 
 echo 'Start containers & Run db migrations'
-make up
+
+#make up
 
 
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
-
-sudo apt install python3-pip
-
-pip install jupyter
 echo "-------------------------END SETUP---------------------------"
 
 EOF
@@ -140,8 +131,7 @@ resource "aws_budgets_budget" "ec2" {
   name              = "budget-ec2-monthly"
   budget_type       = "COST"
   limit_amount      = "5"
-  limit_unit        = "USD"
-  time_period_end   = "2087-06-15_00:00"
+  limit_unit        = "USD"  time_period_end   = "2087-06-15_00:00"
   time_period_start = "2022-10-22_00:00"
   time_unit         = "MONTHLY"
 
