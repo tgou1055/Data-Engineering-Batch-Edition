@@ -128,8 +128,7 @@ rm -rf ~/miniconda3/miniconda.sh
 
 sudo apt install python3-pip
 
-pip install jupyter notebook
-
+pip install jupyter
 echo "-------------------------END SETUP---------------------------"
 
 EOF
