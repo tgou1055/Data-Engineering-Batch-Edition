@@ -7,6 +7,6 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 
-sudo apt install python3-pip
-
-pip install jupyter
+conda install jupyter
+conda install sympy
+conda install numpy
